@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Alfit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: powderblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin: 20px;
+        }
+
+        input[type="file"] {
+            color: red;
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            input[type="file"] {
+                font-size: 14px;
+            }
+
+            input[type="submit"] {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="https://images2.imgbox.com/0c/d3/e8Nxi0CM_o.png" alt="Vigilato" class="logo">
+<h1>Al Calories Tracker</h1>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    Upload photo:
+    <input type="file" accept="image/*" name="file" />
+    <input type="submit" value="Upload and Track">
+</form>
+
+{{ prediction_text }}
+
+<script>
+    console.log('hello');
+</script>
+</body>
+</html>
