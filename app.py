@@ -160,123 +160,7 @@ def findcalories():
     print("--------------------------------------------------------")
     #c1+=1
     return classes[class_ids[0]]
-    # fun 3
-    # result_img , history_cropped_images , segmented_img_dict , segmentation_to_calorie , final_data = find_required_detections(img1 , class_ids , confidences , boxes)
-
-
-    # print("\nthe result image is ")
-    # imShow(result_img)
-
-    # history = input("\n\nWould you like to check the privious History of Images, provided you have used the system  more than once...(¬‿¬)\n ==> yes or Y / no or N \n")
-    # history_final_result_img.append(result_img)
-    # if history == "yes"  or history == "Y":
-    #     print(f"\n****** currently we have {len(history_final_result_img)} images in our database....******")
-    #     #print(history_final_result_img)
-    #     show_history(history_final_result_img)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-
-
-
-# @app.route('/signup')
-# def signup():
-#     return render_template("signup.html")
-
-
-# @app.route('/detect', methods=['POST'])
-# def surveil():
-#     if request.method == 'POST':
-#         phone_no = request.form.get("phone_number")
-#         img_database='faces_'+phone_no+'/'
-#         IP_address = request.form.get("camera_address")
-#         camera_address='http://'+IP_address+'/videofeed'
-#         # camera_address=0
-#         print(img_database)
-#         print(IP_address)
-#         print(IP_address)
-
-#         # sfr = SimpleFacerec()
-#         # sfr.load_encoding_images(img_database)
-
-#         # # Load Camera
-#         # cap = cv2.VideoCapture(camera_address)
-#         # # return render_template("signup.html")
-#         # while True:
-#         #     ret, frame = cap.read()
-
-#         #     # Detect Faces
-#         #     name = 'Unknown'
-#         #     face_locations, face_names = sfr.detect_known_faces(frame)
-
-#         #     for face_loc, name in zip(face_locations, face_names):
-#         #         y1, x2, y2, x1 = face_loc[0], face_loc[1], face_loc[2], face_loc[3]
-#         #         cv2.putText(frame, name, (x1, y1 - 10), cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 200), 2)
-#         #         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 200), 4)
-#         #         if name == 'Unknown':
-#         #             time.sleep(5)
-#         #             cv2.imwrite(os.path.join('unknown_faces/', 'alert0.jpg'), frame)
-#         #             cv2.putText(frame, name, (x1, y1 - 10), cv2.FONT_HERSHEY_DUPLEX, 1, (0, 0, 200), 2)
-#         #             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 200), 4)
-#         #             result = subprocess.run(['imgur-uploader', 'unknown_faces/alert0.jpg'], stdout=subprocess.PIPE)
-#         #             result.stdout.decode('utf8')
-#         #             res = result.stdout.splitlines()
-#         #             res1 = str(res[1])
-#         #             img_url = re.findall('(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-&?=%.]+', res1)
-#         #             print(img_url[0])
-#         #             message = 'kdeconnect-cli -d b3ea48a377a40a72 --destination +91' + str(
-#         #                 phone_no) + ' --send-sms \"Unknown visitor detected ' + img_url[0] + '\"'
-#         #             print(message)
-#         #             os.system(message)
-
-#         #     if(ret):
-#         #         cv2.imshow("Frame", frame)
-
-#         #     key = cv2.waitKey(1)
-#         #     if key == 27:
-#         #         break
-
-#         # cap.release()
-#         # cv2.destroyAllWindows()
-
-
-#         return "<h1>Files Uploaded Successfully.!</h1>"
-
-def i1mShow(path):
+ def i1mShow(path):
     if type(path) == str():
         image = cv2.imread(path)
     else:
@@ -292,9 +176,6 @@ def i1mShow(path):
     plt.show()
 
 
-# # Helper crop function
-
-# In[9]:
 
 
 #def crop_img(img_save_path,bb_cordinate):
@@ -780,44 +661,6 @@ def find_required_detections(input_image , class_ids , confidences , boxes):
 
     return result_img , history_cropped_images , segmented_img_dict , segmentation_to_calorie , final_data
 
-
-
-# # collect all the data for later use - History
-
-# In[ ]:
-
-
-# history_final_result_img = [ ]
-
-# def show_history(history_list):
-
-#     order , limit = map( int, input("""
-#     enter '1' for seeing in recent order else enter 0 to see from very start
-#     and limit for displaying the total number of images
-#     """).split() )
-
-# #     if limit >=1  and  limit <= len(history_list):
-# #         limit = limit
-# #     elif len(history_list) > 5 :
-# #         limit = 5
-# #     elif limit > len(history_list):
-# #         print(f" limit value exceeded the length of array plz provide value less than {len(history_list)}")
-# #         limit = input("enter the limit value again : ")
-# # #     limit = 1 # default 1 if limit exx
-# #     if order ==1:
-# #         limit = len(history_list) - limit
-# #         for i in range(len(history_list)-1, limit, -1):
-# #             imShow(history_list[i])
-# #     elif order == 0:
-# #         for i in range(limit):
-# #             imShow(history_list[i])
-
-#     if order ==1:
-#         for i in range(len(history_list)-1, -1, -1):
-#             imShow(history_list[i])
-#     elif order == 0:
-#         for i in range(len(history_list)):
-#             imShow(history_list[i])
 
 
 
