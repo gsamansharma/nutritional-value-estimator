@@ -1,3 +1,5 @@
 streamlit
+opencv-python-headless
 inference-sdk
-opencv-python
+pillow
+python-dotenv
